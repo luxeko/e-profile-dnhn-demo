@@ -1,0 +1,31 @@
+/*
+    14 pro max 430px
+    12 pro 390px
+    XR 414px
+    SE 375px
+*/
+@media (max-width: 576px) {
+    .content-preview .content-container .content-header .header-layout > div:first-child {
+        height: 20px !important;
+    }
+}
+
+@media screen and (min-width: 576px) {
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+}
+@media screen and (min-width: 992px) {  }
+
+
+@media screen and (min-width: 1200px) {
+    
+}
+
+@media screen and (min-width: 1600px) {
+
+}
