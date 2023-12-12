@@ -1,6 +1,5 @@
 // Shorthand for $( document ).ready()
 $(function() {
-
     const swiper = new Swiper('.slider-banner-container', {
         // Optional parameters
         loop: true,
@@ -23,33 +22,33 @@ $(function() {
         },
     });
     const handleRunSwiper = (productShowPerView) => {
-        const swiper2 = new Swiper('.content-product-container', {
-            loop: true,
-            rewind: true,
-            spaceBetween: 16,
-            slidesPerView: productShowPerView,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            // breakpoints: {
-            //     768: {
-            //         slidesPerView: 2,
-            //         spaceBetween: 40,
-            //     },
-            //     1200: {
-            //         slidesPerView: 3,
-            //         spaceBetween: 50,
-            //     },
-            // },
-        });
+    
     }
-    handleRunSwiper(3)
+    const swiper2 = new Swiper('.content-product-container', {
+        loop: true,
+        rewind: true,
+        spaceBetween: 16,
+        slidesPerView: 3,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        // breakpoints: {
+        //     768: {
+        //         slidesPerView: 2,
+        //         spaceBetween: 40,
+        //     },
+        //     1200: {
+        //         slidesPerView: 3,
+        //         spaceBetween: 50,
+        //     },
+        // },
+    });
     $('#mobile-preview').on('click', function () {
         handleCheckSizeOfLayout(576)
     })
@@ -71,7 +70,7 @@ $(function() {
                 $('#content-preview').animate({
                     scrollTop: 0
                 }, 'smooth');
-                handleRunSwiper(1)
+                swiper2.params.slidesPerView = 1
                 handleLayoutInMobile()
                 break
             case 768:
@@ -173,10 +172,9 @@ $(function() {
             fontSize: '10px'
         })
     }
-    handleLayoutInMobile()
     
     const handleLayoutInPC = () => {
-    }
     
+    }
 
 });
