@@ -65,11 +65,11 @@ $(function() {
     })
     
     const handleCheckSizeOfLayout = (getSizeLayout) => {
+        $('#content-preview').animate({
+            scrollTop: 0
+        }, 'smooth');
         switch (getSizeLayout) {
             case 576:
-                $('#content-preview').animate({
-                    scrollTop: 0
-                }, 'smooth');
                 swiper2.params.slidesPerView = 1
                 handleLayoutInMobile()
                 break
@@ -80,9 +80,6 @@ $(function() {
                 break
             
             case 1600:
-                $('#content-preview').animate({
-                    scrollTop: 0
-                }, 'smooth');
                 swiper2.params.slidesPerView = 3
                 handleLayoutInPC()
                 break
