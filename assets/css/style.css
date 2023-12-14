@@ -130,6 +130,7 @@ main .container-layout {
     background: white;
     height: max-content;
     transition: all ease 500ms;
+    width: 100%;
 }
 
 .content-preview .content-container .content-header {
@@ -268,15 +269,15 @@ main .container-layout {
     position: relative;
 }
 
-.content-container .content-sapo .sapo-detail::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background: rgba(45, 45, 45, 0.8);
-    height: 100%;
-    right: 0;
-    top: 0;
-}
+/*.content-container .content-sapo .sapo-detail::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    width: 6px;*/
+/*    background: rgba(45, 45, 45, 0.8);*/
+/*    height: 100%;*/
+/*    right: 0;*/
+/*    top: 0;*/
+/*}*/
 
 .content-container .content-sapo .sapo-detail .sapo-text {
     font-family: 'Lora', serif;

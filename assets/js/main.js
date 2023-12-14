@@ -1,4 +1,3 @@
-// Shorthand for $( document ).ready()
 $(function() {
     const swiper = new Swiper('.slider-banner-container', {
         // Optional parameters
@@ -21,9 +20,7 @@ $(function() {
             prevEl: '.swiper-button-prev',
         },
     });
-    const handleRunSwiper = (productShowPerView) => {
-    
-    }
+   
     const swiper2 = new Swiper('.content-product-container', {
         loop: true,
         rewind: true,
@@ -54,7 +51,6 @@ $(function() {
     })
     $('#tablet-preview').on('click', function () {
         handleCheckSizeOfLayout(768)
-        
     })
     $('#laptop-preview').on('click', function () {
         handleCheckSizeOfLayout(1200)
@@ -74,11 +70,11 @@ $(function() {
                 handleLayoutInMobile()
                 break
             case 768:
+                swiper2.params.slidesPerView = 2
+                handleLayoutInTablet()
                 break
-            
             case 1200:
                 break
-            
             case 1600:
                 swiper2.params.slidesPerView = 3
                 handleLayoutInPC()
@@ -173,7 +169,16 @@ $(function() {
             fontSize: '10px'
         })
     }
- 
+    const handleLayoutInTablet = () => {
+        $('.main-content .content-preview').css({
+            display: 'flex',
+            justifyContent: 'center'
+        })
+        $('.main-content .content-preview .content-container').css({
+            width: '768px'
+        })
+    }
+    handleLayoutInTablet()
     const handleLayoutInPC = () => {
         $('.main-content .content-preview').css({
             display: '',
