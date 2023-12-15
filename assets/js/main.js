@@ -72,6 +72,7 @@ $(function() {
                 handleLayoutInTablet()
                 break
             case 1200:
+                handleLayoutInPC()
                 break
             case 1600:
                 handleLayoutInPC()
@@ -227,6 +228,8 @@ $(function() {
         })
     }
     handleLayoutInTablet()
+    
+   
     const handleLayoutInPC = () => {
         swiper2.params.slidesPerView = 3
         $('.main-content .content-preview').css({
