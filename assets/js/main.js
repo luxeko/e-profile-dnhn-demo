@@ -66,17 +66,14 @@ $(function() {
         }, 'smooth');
         switch (getSizeLayout) {
             case 576:
-                swiper2.params.slidesPerView = 1
                 handleLayoutInMobile()
                 break
             case 768:
-                swiper2.params.slidesPerView = 2
                 handleLayoutInTablet()
                 break
             case 1200:
                 break
             case 1600:
-                swiper2.params.slidesPerView = 3
                 handleLayoutInPC()
                 break
             default:
@@ -84,6 +81,7 @@ $(function() {
         }
     }
     const handleLayoutInMobile = () => {
+        swiper2.params.slidesPerView = 1
         $('.main-content .content-preview').css({
             display: 'flex',
             justifyContent: 'center'
@@ -94,14 +92,11 @@ $(function() {
         $('.content-preview .content-container .content-header .header-layout').css({
             height: '32px'
         })
-        $('.content-container .content-header .header-layout > div:first-child img').css({
-            height: '32px'
-        })
         $('.content-preview .content-container .content-header .header-layout > div:not(.header-e-profile-name) h2').css({
-            fontSize: '1.4rem'
+            fontSize: '1.2rem'
         })
         $('.content-preview .content-container .content-header .header-layout > div:nth-child(2) h2').css({
-            fontSize: '1.6rem'
+            fontSize: '2rem'
         })
         $('.content-container .content-slider-image .slider-banner-container .slider-box img').css({
             height: '300px'
@@ -165,11 +160,9 @@ $(function() {
         $('.content-box .content-social-medial-container .social-link i').css({
             fontSize: '16px'
         })
-        $('.content-box .content-copyright').css({
-            fontSize: '10px'
-        })
     }
     const handleLayoutInTablet = () => {
+        swiper2.params.slidesPerView = 2
         $('.main-content .content-preview').css({
             display: 'flex',
             justifyContent: 'center'
@@ -177,9 +170,65 @@ $(function() {
         $('.main-content .content-preview .content-container').css({
             width: '768px'
         })
+        $('.content-preview .content-container .content-header .header-layout').css({
+            height: ''
+        })
+        $('.content-preview .content-container .content-header .header-layout > div:not(.header-e-profile-name) h2').css({
+            fontSize: ''
+        })
+        $('.content-preview .content-container .content-header .header-layout > div:nth-child(2) h2').css({
+            fontSize: ''
+        })
+        $('.content-sapo, .content-title').css({
+            padding: '2rem 6rem'
+        })
+        $('.content-box').css({
+            marginBottom: '2rem'
+        })
+        $('.content-container .content-box .content-partner-information').css({
+            gridTemplateColumns: 'repeat(4, minmax(0, 1fr))'
+        })
+        $('.content-container .content-box .content-partner-information .partner-introduce').css({
+            gridColumn: 'span 2 / span 2'
+        })
+        $('.content-container .content-box .content-partner-information .partner-information').css({
+            gridColumn: 'span 2 / span 2'
+        })
+        $('.content-container .content-box .content-video').css({
+            gridTemplateColumns: 'repeat(4, minmax(0, 1fr))'
+        })
+        $('.content-container .content-box .content-video .description ').css({
+            gridColumn: 'span 2 / span 2'
+        })
+        $('.content-container .content-box .content-video .video').css({
+            gridColumn: 'span 2 / span 2'
+        })
+        $('.content-box .partner-contact-container').css({
+            gap: '18px',
+            gridTemplateColumns: 'repeat(2, minmax(0, 1fr))'
+        })
+        $('.partner-contact-container .partner-address-map, .partner-contact-container .partner-form').css({
+            gridColumn: 'span 1 / span 1'
+        })
+        $('.content-social-medial-container').css({
+            display: '',
+            gap: '',
+            gridTemplateColumns: ''
+        })
+        $('.content-social-medial-container .social-link').css({
+            gridColumn: '',
+            fontSize: '',
+            justifyContent: '',
+            gap: '',
+            marginLeft: ''
+        })
+        $('.content-box .content-social-medial-container .social-link i').css({
+            fontSize: ''
+        })
     }
     handleLayoutInTablet()
     const handleLayoutInPC = () => {
+        swiper2.params.slidesPerView = 3
         $('.main-content .content-preview').css({
             display: '',
             justifyContent: ''
@@ -261,8 +310,17 @@ $(function() {
         $('.content-box .content-social-medial-container .social-link i').css({
             fontSize: ''
         })
-        $('.content-box .content-copyright').css({
-            fontSize: ''
+        $('.content-container .content-box .content-partner-information').css({
+            gridTemplateColumns: ''
+        })
+        $('.content-container .content-box .content-video').css({
+            gridTemplateColumns: ''
+        })
+        $('.content-container .content-box .content-video .description').css({
+            gridColumn: 'span 3 / span 3'
+        })
+        $('.content-container .content-box .content-video .video').css({
+            gridColumn: 'span 2 / span 2'
         })
     }
 
